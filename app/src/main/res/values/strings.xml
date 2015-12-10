@@ -2,5 +2,7 @@
     <string name="app_name">FragmentsSandbox</string>
     <string name="next">Next</string>
     <string name="hello_again">Hello again, %1$s, you should double check you name! I won\'t ask again.</string>
+    <string name="hello_finally">Now I\'m sure. I can say it. Hello %1$s!</string>
     <string name="hello_again_default">Hello again!</string>
+    <string name="hello_finally_default">Now I\'m sure. I can say it. Hello!</string>
 </resources>

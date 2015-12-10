@@ -15,9 +15,11 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <fragment android:layout_height="wrap_content" android:layout_width="match_parent"
+    <fragment
         android:id="@+id/fragment_edit_your_name"
-        android:name="com.github.geekarist.fragmentssandbox.EditYourNameFragment" />
+        android:name="com.github.geekarist.fragmentssandbox.EditYourNameFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button_next"

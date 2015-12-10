@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements EditYourNameFragm
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
+                finish();
             }
         });
     }
