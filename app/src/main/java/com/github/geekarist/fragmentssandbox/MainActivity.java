@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EditYourNameFragment.Listener {
 
-    private EditText nameText;
+    private String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,23 +23,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("name", nameText.getText().toString());
+                intent.putExtra("name", name);
                 startActivity(intent);
-            }
-        });
-
-        nameText = (EditText) findViewById(R.id.text_name);
-
-        View cleanUpButton = findViewById(R.id.button_cleanup);
-        cleanUpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cleanUpText();
             }
         });
     }
 
-    private void cleanUpText() {
-        nameText.setText(nameText.getText().toString().toUpperCase());
+    @Override
+    public void consumeName(String name) {
+        this.name = name;
     }
 }

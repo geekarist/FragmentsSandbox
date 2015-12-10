@@ -15,36 +15,9 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="What's your name?" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/text_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".7" />
-
-            <Button
-                android:id="@+id/button_cleanup"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Clean up!" />
-        </LinearLayout>
-    </LinearLayout>
+    <fragment android:layout_height="wrap_content" android:layout_width="match_parent"
+        android:id="@+id/fragment_edit_your_name"
+        android:name="com.github.geekarist.fragmentssandbox.EditYourNameFragment" />
 
     <Button
         android:id="@+id/button_next"
