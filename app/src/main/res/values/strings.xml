@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">FragmentsSandbox</string>
     <string name="next">Next</string>
+    <string name="hello_again">Hello again, %1$s, you should double check you name! I won\'t ask again.</string>
+    <string name="hello_again_default">Hello again!</string>
 </resources>

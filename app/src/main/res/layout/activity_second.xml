@@ -5,7 +5,8 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/text_hello_again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello again!" />
+        android:text="@string/hello_again_default" />
 </LinearLayout>
