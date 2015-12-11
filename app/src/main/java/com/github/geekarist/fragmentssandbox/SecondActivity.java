@@ -2,6 +2,7 @@ package com.github.geekarist.fragmentssandbox;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -16,8 +17,8 @@ public class SecondActivity extends AppCompatActivity implements EditYourNameFra
         setContentView(R.layout.activity_second);
 
         TextView helloAgainText = (TextView) findViewById(R.id.text_hello_again);
-        String name = getIntent().getExtras().getString("name");
-        helloAgainText.setText(getString(R.string.hello_again, name));
+        mName = getIntent().getExtras().getString("name");
+        helloAgainText.setText(getString(R.string.hello_again, mName));
 
         View nextButton = findViewById(R.id.button_next2);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +29,14 @@ public class SecondActivity extends AppCompatActivity implements EditYourNameFra
                 finish();
             }
         });
+
+        if (savedInstanceState == null) {
+            Fragment editNameFragment = EditYourNameFragment.newInstance(mName);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.fragment_edit_your_name_container, editNameFragment)
+                    .commit();
+        }
     }
 
     @Override
